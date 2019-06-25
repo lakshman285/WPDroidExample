@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <View
+        android:id="@+id/img_news"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/light_transparent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+    <View
+        android:id="@+id/textone"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_below="@+id/img_news"
+        android:layout_toLeftOf="@+id/bookmark_view"
+        android:layout_toStartOf="@+id/bookmark_view"
+        android:background="@color/light_transparent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <View
+        android:id="@+id/texttwo"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_below="@+id/textone"
+        android:layout_toLeftOf="@+id/bookmark_view"
+        android:layout_toStartOf="@+id/bookmark_view"
+        android:background="@color/light_transparent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"/>
+
+    <View
+        android:id="@+id/bookmark_view"
+        android:layout_marginTop="6dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/light_transparent"
+        android:layout_below="@+id/img_news"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin" />
+
+</RelativeLayout>

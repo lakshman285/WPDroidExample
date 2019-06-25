@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="@dimen/card_margin"
+        android:layout_marginLeft="@dimen/card_margin"
+        android:layout_marginRight="@dimen/card_margin"
+        android:layout_marginStart="@dimen/card_margin"
+        android:layout_marginTop="3dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="@dimen/card_album_radius">
+
+        <RelativeLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/left_image_top_layout"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_toLeftOf="@+id/thumbnail"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_margin"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"
+                    android:layout_toStartOf="@+id/thumbnail" />
+
+                <ImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="85dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="80dp"
+                    android:layout_margin="@dimen/default_margin"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:contentDescription="@string/to_do"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/empty_photo"
+                    android:layout_alignParentEnd="true"
+                    android:focusable="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/default_margin_half"
+                android:layout_below="@+id/left_image_top_layout">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/article_title_date_layout"
+                    tools:ignore="RelativeOverlap">
+
+                    <TextView
+                        android:id="@+id/post_meta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/credits"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/post_meta_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/credits"
+                        android:visibility="visible"
+                        tools:ignore="RtlSymmetry"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bookmarkLayout"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/bookmark"
+                        android:layout_width="24dp"
+                        android:layout_height="16dp"
+                        android:layout_alignWithParentIfMissing="false"
+                        android:contentDescription="@string/to_do" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+

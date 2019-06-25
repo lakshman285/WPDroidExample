@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.ikvaesolutions.truthdarequestions.android"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        manifestPlaceholders = [onesignal_app_id: 'a9d38b4f-f7ce-4511-86f0-47a86497c731', onesignal_google_project_number: 'REMOTE']
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            zipAlignEnabled true
+            shrinkResources true
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: '*.jar')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:customtabs:27.1.1'
+    implementation 'com.google.android.gms:play-services-ads:15.0.1'
+    implementation 'com.ethanhua:skeleton:0.2.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.google.android.ads.consent:consent-library:1.0.6'
+    implementation 'com.onesignal:OneSignal:3.9.2'
+
+    implementation 'com.android.volley:volley:1.0.0'
+    implementation 'com.google.android.gms:play-services-analytics:12.0.1'
+    implementation 'com.android.support:multidex:1.0.3'
+
+
+    testImplementation 'junit:junit:4.12'
+}
+
+
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+
+    dependencies {
+        // These docs use an open ended version so that our plugin
+        // can be updated quickly in response to Android tooling updates
+
+        // We recommend changing it to the latest version from our changelog:
+        // https://docs.fabric.io/android/changelog.html#fabric-gradle-plugin
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.11.0, 0.99.99]'
+    }
+}
+
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+
+
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'

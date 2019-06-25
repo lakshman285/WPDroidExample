@@ -1,0 +1,256 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    android:id="@+id/category_root_layout"
+    tools:context="com.ikvaesolutions.android.view.fragment.AboutFragment">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/about_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:background="@color/default_white"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/about_root_layout"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <ImageView
+                    android:id="@+id/website_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/about_website_image_size"
+                    android:contentDescription="@string/to_do"
+                    android:layout_gravity="center"/>
+
+                <!--<TextView-->
+                    <!--android:id="@+id/website_name"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignWithParentIfMissing="false"-->
+                    <!--android:layout_below="@+id/website_logo"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:paddingTop="@dimen/common_padding_half"-->
+                    <!--android:text="@string/app_name"-->
+                    <!--android:textColor="@color/colorPrimaryTextDark"-->
+                    <!--android:textSize="@dimen/about_website_name_text_size"-->
+                    <!--android:visibility="gone" />-->
+
+                <TextView
+                    android:id="@+id/website_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/common_padding_half"
+                    android:textColor="@color/colorPrimaryTextLight"
+                    android:textSize="@dimen/about_website_description" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/website_read_more_button"
+                    android:layout_gravity="end"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/website_contact_email"
+                    android:padding="@dimen/default_margin"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/about_email_image"/>
+
+                    <TextView
+                        android:id="@+id/about_email_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/about_email_image"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorMaterialBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/about_email_image" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/website_contact_phone"
+                    android:padding="@dimen/default_margin"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/about_phone_image"/>
+
+                    <TextView
+                        android:id="@+id/about_phone_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/about_phone_image"
+                        android:gravity="center_vertical"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorMaterialBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@+id/about_phone_image" />
+                 </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/getintouch"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+                    <View
+                        android:layout_width="110dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:background="@color/colorPrimaryTextLight" />
+
+                    <TextView
+                        android:id="@+id/tvText"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:text="@string/about_get_in_text"
+                        android:textColor="@color/colorPrimaryTextLight" />
+
+                    <View
+                        android:layout_width="110dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:background="@color/colorPrimaryTextLight" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/socialicon_facebook"
+                        android:layout_width="@dimen/social_media_icon_size"
+                        android:layout_height="@dimen/social_media_icon_size"
+                        android:padding="@dimen/common_padding_half"
+                        app:srcCompat="@drawable/ic_facebook" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/socialicon_googleplus"
+                        android:layout_width="@dimen/social_media_icon_size"
+                        android:layout_height="@dimen/social_media_icon_size"
+                        android:padding="@dimen/common_padding_half"
+                        app:srcCompat="@drawable/ic_google_plus" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/socialicon_twitter"
+                        android:layout_width="@dimen/social_media_icon_size"
+                        android:layout_height="@dimen/social_media_icon_size"
+                        android:padding="@dimen/common_padding_half"
+                        app:srcCompat="@drawable/ic_twitter" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/socialicon_linkedin"
+                        android:layout_width="@dimen/social_media_icon_size"
+                        android:layout_height="@dimen/social_media_icon_size"
+                        android:padding="@dimen/common_padding_half"
+                        app:srcCompat="@drawable/ic_linkedin" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/socialicon_youtube"
+                        android:layout_width="@dimen/social_media_icon_size"
+                        android:layout_height="@dimen/social_media_icon_size"
+                        android:padding="@dimen/common_padding_half"
+                        app:srcCompat="@drawable/ic_youtube" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/socialicon_instagram"
+                        android:layout_width="@dimen/social_media_icon_size"
+                        android:layout_height="@dimen/social_media_icon_size"
+                        android:padding="@dimen/common_padding_half"
+                        app:srcCompat="@drawable/ic_instagram" />
+
+                </LinearLayout>
+
+            <TextView
+                android:id="@+id/app_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:padding="@dimen/activity_vertical_margin"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/about_no_internet_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:visibility="gone"
+        android:layout_marginTop="64dp">
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/about_no_internet_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/about_no_internet_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_no_internet_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:textSize="20sp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/about_no_internet_try_again_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_internet_connection_button"
+            android:layout_below="@+id/about_no_internet_message"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorWhite"
+            android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_name"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/default_margin_half"
+        android:background="@drawable/edit_text_background"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:hint="@string/enter_your_name"
+            android:singleLine="true"
+            android:inputType="text"
+            android:id="@+id/comment_person_name" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_email"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/default_margin_half"
+        android:background="@drawable/edit_text_background"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:hint="@string/enter_your_email"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:id="@+id/comment_person_email" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:lines="5"
+        android:background="@drawable/edit_text_background"
+        android:gravity="start"
+        android:layout_margin="@dimen/default_margin_half"
+        android:padding="@dimen/default_margin_half"
+        android:hint="@string/enter_your_comment"
+        android:id="@+id/entered_comment" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_comment_button"
+        android:padding="@dimen/default_margin_half"
+        android:text="@string/add_comment"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/adding_comment_progress_bar"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginBottom="-6dp"/>
+
+</LinearLayout>

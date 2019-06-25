@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@color/default_white">
+
+    <ImageView
+        android:id="@+id/author_profile_picture"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/to_do"
+        app:srcCompat="@mipmap/empty_photo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/author_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryTextDark"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_weight="3.5"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"/>
+
+            <TextView
+                android:id="@+id/commented_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#ddd"
+                android:gravity="end"
+                android:layout_weight="1.5"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/common_padding_half"
+            android:textColor="@color/colorPrimaryTextLight"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:background="#ddd"
+            android:layout_marginRight="@dimen/common_padding_half"
+            android:layout_marginLeft="@dimen/common_padding_half"/>
+
+    </LinearLayout>
+
+</LinearLayout>

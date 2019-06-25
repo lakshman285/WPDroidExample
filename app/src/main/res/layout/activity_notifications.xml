@@ -1,0 +1,77 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/default_white"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <ImageView
+            android:layout_marginTop="64dp"
+            android:id="@+id/imageViewFeaturedImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/empty_photo"/>
+
+        <TextView
+            android:id="@+id/textviewDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryTextDark"
+            android:layout_below="@+id/imageViewFeaturedImage"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/textviewMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textviewDetails"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"/>
+
+        <Button
+            android:id="@+id/buttonLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textviewMessage"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/open_link"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:textColor="@color/default_white"
+            android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+
+    </RelativeLayout>
+</ScrollView>

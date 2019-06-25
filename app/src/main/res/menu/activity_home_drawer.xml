@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_latest_updates"
+            android:title="@string/nav_latest_updates" />
+
+        <item
+            android:id="@+id/nav_bookmarks"
+            android:icon="@drawable/ic_bookmark_filled_gray"
+            android:title="@string/nav_bookmarks" />
+        <item
+            android:id="@+id/nav_categories"
+            android:title="@string/nav_categories"/>
+
+
+    </group>
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_about_us"
+                android:title="@string/nav_about" />
+
+            <item
+                android:id="@+id/nav_invite_friends"
+                android:title="@string/nav_invite_friends" />
+
+        </menu>
+    </item>
+
+</menu>

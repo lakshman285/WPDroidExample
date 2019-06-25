@@ -1,0 +1,30 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="splash_screen_logo">150dp</dimen>
+    <dimen name="google_login_image_size">150dp</dimen>
+    <dimen name="profile_details_image">100dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="common_padding_half">8dp</dimen>
+
+    <!-- List item sizes -->
+    <dimen name="title">18sp</dimen>
+    <dimen name="card_margin">5dp</dimen>
+    <dimen name="card_album_radius">2dp</dimen>
+    <dimen name="album_cover_height">160dp</dimen>
+    <dimen name="album_title_padding">10dp</dimen>
+    <dimen name="categories_spacing">8dp</dimen>
+    <dimen name="categories_title">20sp</dimen>
+    <dimen name="categories_spacing_half">4dp</dimen>
+
+    <dimen name="about_website_image_size">75dp</dimen>
+    <dimen name="about_website_name_text_size">25sp</dimen>
+    <dimen name="social_media_icon_size">50dp</dimen>
+    <dimen name="about_website_description">16sp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="default_margin_half">8dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
